@@ -236,7 +236,7 @@ p {
     height: 1074px;
     position: relative;
 
-    margin-bottom: 800px;
+    margin-bottom: 900px;
 
     background: #131313;
     display: flex;
@@ -270,6 +270,10 @@ p {
     padding-top: 34px;
 
     line-height: 1.9;
+}
+
+.description__mobile--slider {
+    display: none;
 }
 
 /* Description features
@@ -382,7 +386,8 @@ p {
     background-size: cover;
     max-width: 817px;
     width: 100%;
-    height: 65vh;
+    height: 55vh;
+    max-height: 434px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -633,21 +638,22 @@ input[type=checkbox]
 .features {
     background-image: url(src/img/features-bg.jpg);
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 
 .features__inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
     height: 725px;
+    justify-content: space-between;
 }
 
 /* Features Left-Side
 ==================== */
 
 .our__features {
-    width: 45%;
+    width: 40%;
     padding-top: 117px;
     padding-left: 100px;
 }
@@ -694,8 +700,9 @@ input[type=checkbox]
     height: 520px;
 
     margin-top: 117px;
+    margin-left: 140px;
     background: #131313;
-box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 }
 
 .request__subtitle {
@@ -1019,7 +1026,7 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 .contacts__inner {
     margin: 0 auto;
     position: relative;
-    bottom: 145px;
+    bottom: 150px;
     text-align: center;
 }
 
@@ -1084,7 +1091,7 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 }
 
 .map {
-    width: 90%;
+    width: 70%;
     height: auto;
 }
 
@@ -1096,12 +1103,15 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     margin-left: 15px;
 }
 
-/* Footer */
+/* Footer
+=========== */
 
 .header--footer {
     height: 133px;
 }
 
+/* Media Adaptation
+================== */
 @media screen and (max-width: 1300px) {
     .container {
         width: 100%;
@@ -1170,10 +1180,11 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 
     .projects {
         padding-top: 36px;
+        padding-bottom: 130px;
         position: static;
         flex-wrap: wrap;
-        height: 250vh;
-        margin-bottom: 100px;
+        height: auto;
+        margin-bottom: 40px;
     }
 
     .projects__inner {
@@ -1183,9 +1194,43 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 
     .projects__description {
         width: 100%;
+        max-width: 900px;
         justify-content: center;
         text-align: center;
         margin-top: 0px;
+    }
+
+    .description__mobile--slider {
+        display: block;
+        background: url("src/img/projects-mobile.jpg") center no-repeat;
+        background-size: cover;
+        margin: auto;
+        width: 90%;
+        height: 45vw;
+        max-height: 400px;
+        margin: 20px auto;
+    }
+
+    .description__mobile--slider::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 45%;
+        left: -40%;
+        width: 36px;
+        height: 36px;
+        background: url('src/img/slider-left.svg') no-repeat center;
+    }
+
+    .description__mobile--slider::after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 45%;
+        right: -40%;
+        width: 36px;
+        height: 36px;
+        background: url('src/img/slider-right.svg') no-repeat center;
     }
 
     .description__switches {
@@ -1202,6 +1247,7 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     .online__control {
         position: relative;
         bottom: 0;
+        margin-top: 100px;
     }
 
     .shadow__photo {
@@ -1252,7 +1298,7 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     
     .btn-submit--mobile {
         display: block;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     /* Types Of Repair
@@ -1268,22 +1314,29 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 
     .repair__item {
         width: 95%;
+        max-width: 620px;
         margin-left: 0;
         margin-bottom: 250px;
     }
 
     .repair__info {
         margin-left: 0px;
-        width: 50vw;
-        height: 60vh;
-        padding: 0 auto;
+        margin-top: 100px;
+        width: 65vw;
+        max-width: 300px;
+        height: 40vh;
+    }
+
+    .list__item {
+        line-height: 1.69;
     }
 
     .info__button {
         left: 0;
+        bottom: 0;
         font-size: 15px;
         padding: 10px 5px;
-        width: 60%;
+        width: 80%;
     }
 
     .features {
@@ -1294,11 +1347,34 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     =================== */
 
     .fantasies {
-        background: url("src/img/fantasies-bg.jpg") center no-repeat;
+        background: url("src/img/fantasies-bg.jpg") no-repeat center;
         background-size: cover;
-        margin: 230px auto;
+        margin: 150px auto 30px;
         width: 90%;
         height: 50vw;
+        position: relative;
+    }
+
+    .fantasies__inner::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 3%;
+        width: 36px;
+        height: 36px;
+        background: url('src/img/slider-left.svg') no-repeat center;
+    }
+
+    .fantasies__inner::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 3%;
+        top: 45%;
+        width: 36px;
+        height: 36px;
+        background: url('src/img/slider-right.svg') no-repeat center;
     }
 
     .fantasies__inner {
@@ -1307,11 +1383,12 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     }
 
     .fantasies__left {
-        width: 100%;
+        width: 82%;
     }
 
     .fantasies__subtitle {
         position: relative;
+        font-size: 22px;
         top: -250px;
     }
 
@@ -1335,8 +1412,9 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     ========== */
 
     .contacts {
-        height: 210vh;
-
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 10px;
         background: #181818;
     }
 
@@ -1364,4 +1442,22 @@ box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
     .input__text--reverse {
         background-color: #181818;
     }
+
+    .address {
+        margin-top: 100px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .map {
+        width: 95%;
+        max-width: 880px;
+        height: 64vw;
+        max-height: 550px;
+    }
+
+    .header--footer {
+        display: none;
+    }
+
 }
