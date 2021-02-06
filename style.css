@@ -216,7 +216,7 @@ p {
 .calculate__button {
     background: #E3B873;
 
-    padding: 22px 42px;
+    padding: 25px 42px 10px;
 }
 
 .submit__button {
@@ -225,7 +225,7 @@ p {
     border: 1px solid #FFF;
     box-shadow: none;
 
-    padding: 23px 20px;
+    padding: 23px 27px;
     margin-left: 20px;
 }
 
@@ -519,6 +519,14 @@ input[type=checkbox]
 
     padding: 15px 65px;
     
+    border-bottom: none;
+}
+
+.submit__form:focus {
+    border-bottom: none;
+}
+
+.submit__form:hover {
     border-bottom: none;
 }
 
