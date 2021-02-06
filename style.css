@@ -638,14 +638,13 @@ input[type=checkbox]
 .features {
     background-image: url(src/img/features-bg.jpg);
     background-repeat: no-repeat;
-    width: 100%;
+    height: 725px;;
 }
 
 
 .features__inner {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    height: 725px;
     justify-content: space-between;
 }
 
@@ -700,7 +699,6 @@ input[type=checkbox]
     height: 520px;
 
     margin-top: 117px;
-    margin-left: 140px;
     background: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 }
@@ -743,13 +741,17 @@ input[type=checkbox]
 
 .measurer__button {
     display: flex;
-
     position: relative;
-    left: 49%;
-
+    width: 50%;
     margin-top: 20px;
+    padding-right: 0px;
 }
 
+.btn--measurer {
+    position: relative;
+    left: 49%;
+    margin-top: 20px;
+}
 .costs__save {
     position: relative;
     top: 10%;
