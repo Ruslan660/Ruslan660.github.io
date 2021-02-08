@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: 'Yeseva One', sans-serif;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 p {
@@ -306,10 +307,17 @@ p {
 ======================*/
 
 .description__switches {
+    display: flex;
+    justify-content: space-between;
     width: 205px;
     height: 13px;
     margin-left: -7px;
     margin-top: 20px;
+}
+
+.menu-point--active {
+    background: #FFF;
+    border-radius: 99%;
 }
 
 /* Description gallery
@@ -333,14 +341,17 @@ p {
     padding-bottom: 52px;
 }
 
-.gallery__title {
+.gallery__link {
     font-size: 14px;
+    font-family: 'Yeseva One', sans-serif;
     font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
     line-height: 1.35;
     color: rgba(255, 255, 255, 0.3);
 }
 
-.active__title {
+.active__link {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
@@ -640,6 +651,10 @@ input[type=checkbox]
     font-family: 'Yeseva One', sans-serif;
 }
 
+.info__button:hover {
+    opacity: 1;
+    cursor: default;
+}
 /* Features
 ============ */
 
@@ -682,7 +697,9 @@ input[type=checkbox]
     margin-right: 17px;
     margin-top: -9px;
     
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Yeseva One', sans-serif;
 
     background-color: #E3B873;
     border-radius: 50%;
@@ -994,6 +1011,7 @@ input[type=checkbox]
 
 .details__info--right {
     width: 55%;
+    border-right: none;
 }
 
 .details__icon {
