@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Yeseva+One&display=swap" rel="stylesheet">
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          const uluru = { lat: 47.244700315190116, lng: 39.7231458304289 };
+          // The map, centered at Uluru
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 18,
+            center: uluru,
+          });
+          // The marker, positioned at Uluru
+          const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -17,12 +34,13 @@
                     <span class="logo">IC "Repair Design Project"</span>
                 </div>
                 <nav class="header__nav">
-                    <a href="#" class="nav__link active">Home</a>
-                    <a href="#" class="nav__link">Projects</a>
-                    <a href="#" class="nav__link">Measurement</a>
-                    <a href="#" class="nav__link">Team</a>
-                    <a href="#" class="nav__link">Reviews</a>
-                    <a href="#" class="nav__link">Contacts</a>
+                    <a href="#intro" class="nav__link">Intro</a>
+                    <a href="#projects" class="nav__link">Our Projects</a>
+                    <a href="#repair" class="nav__link">Our Services</a>
+                    <a href="#features" class="nav__link">Request</a>
+                    <a href="#fantasies" class="nav__link">Our Styles</a>
+                    <a href="#clients" class="nav__link">Reviews</a>
+                    <a href="#contacts" class="nav__link">Contacts</a>
                 </nav>
                 <div class="header__phone">
                     <a class="number" href="tel:89287683239">+7 (928) 768-32-39</a>
@@ -36,7 +54,7 @@
     </header>
     <!-- /.header -->
     <!-- Intro -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <h1 class="intro__title">Turnkey Repair in the<br  />
@@ -54,7 +72,7 @@
     </section> 
     <!-- /.intro -->
     <!-- Our Projects Section -->
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container projects__inner">
             <div class="projects__description">
                 <h2 class="description__title">Completed <br   />projects</h2>
@@ -161,7 +179,7 @@
     </section>
     <!-- /.projects -->
     <!-- Repair Types Section -->
-    <section class="repair__types">
+    <section class="repair__types" id="repair">
         <div class="container">
             <div class="repair__inner">
                 <h2 class="repair__title">Types of repair</h2>
@@ -224,7 +242,7 @@
     </section>
         <!-- /.repair__types -->
         <!-- Online Control Request -->
-        <section class="features">
+        <section class="features" id="features">
             <div class="container">
                 <div class="features__inner">
                     <div class="our__features">
@@ -288,7 +306,7 @@
             <!-- /.container -->
         </section>
         <!-- /.features -->
-<section class="fantasies">
+<section class="fantasies" id="fantasies">
     <div class="container">
         <div class="fantasies__inner">
             <div class="fantasies__left">
@@ -325,7 +343,7 @@
 </section>
 <!-- /.fantasies -->
 <!-- Clients Section -->
-<section class="clients">
+<section class="clients" id="clients">
     <div class="container">
         <div class="clients__inner">
             <h2 class="clients__title">Our clients</h2>
@@ -404,7 +422,7 @@
 <!-- /.clients -->
 <div class="city__background"></div>
 <!-- Address Section -->
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="container">
         <div class="contacts__inner">
             <div class="questions__form">
@@ -443,7 +461,9 @@
                 <img src="src/img/mail-icon.svg" alt="" class="contacts__icon">
                 <img src="src/img/ig-icon.svg" alt="" class="contacts__icon">
             </div>
-            <img src="src/img/map.jpg" alt="" class="map">
+            <div class="map--container">
+                <div id="map"></div>
+            </div>
         </div>
         <!-- /.contacts__inner -->
     </div>
@@ -475,4 +495,8 @@
     </div>
     <!-- /.header__inner -->
 </footer>
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPd4BTe44_VVItUZAsVaDHWjn7nzzDh1Q&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </html>

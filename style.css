@@ -121,15 +121,11 @@ p {
 }
 
 .nav__link:hover {
-    color: peachpuff;
+    color: #E3B873;
 }
 
 .nav_link:first-child {
     padding-left: 0px;
-}
-
-.nav__link.active {
-    color: #E3B873;
 }
 
 .header__phone {
@@ -140,6 +136,7 @@ p {
 ====================*/
 
 .header__call_btn {
+    margin-left: 30px;
     margin-top: -12px;
     background: #E3B873;
 }
@@ -349,6 +346,11 @@ p {
     text-transform: uppercase;
     line-height: 1.35;
     color: rgba(255, 255, 255, 0.3);
+    transition: color 0.2s linear;
+}
+
+.gallery__link:hover {
+    color: #E3B873;
 }
 
 .active__link {
@@ -1056,6 +1058,7 @@ input[type=checkbox]
     position: relative;
     bottom: 150px;
     text-align: center;
+    justify-content: center;
 }
 
 .questions__form {
@@ -1122,9 +1125,18 @@ input[type=checkbox]
     margin-bottom: 25px;
 }
 
-.map {
-    width: 70%;
-    height: auto;
+.map--container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 400px;
+}
+
+#map {
+    position:absolute;
+    width: 90%;
+    height: 100%;
 }
 
 .contacts__icons {
@@ -1133,6 +1145,10 @@ input[type=checkbox]
 
 .contacts__icon {
     margin-left: 15px;
+}
+
+.contacts__icon:first-child {
+    margin-left: 0px;
 }
 
 /* Footer
@@ -1365,10 +1381,11 @@ input[type=checkbox]
 
     .info__button {
         left: 0;
-        bottom: 0;
         font-size: 15px;
         padding: 10px 5px;
-        width: 80%;
+
+        max-width: 215px;
+        width: 100%;
     }
 
     .features {
@@ -1481,17 +1498,12 @@ input[type=checkbox]
         line-height: 1.3;
     }
 
-    .map {
-        display: none;
-    }
-
-    .map--mobile {
-        display: inline-block;
+    .map--container {
         width: 95%;
         max-width: 880px;
         height: 64vw;
         max-height: 550px;
-        margin-right: 0px;
+        margin: 0 auto;
     }
 
     .header--footer {
