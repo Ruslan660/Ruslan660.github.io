@@ -1111,10 +1111,6 @@ input[type=checkbox]
     margin: 50px auto 0;
 }
 
-.map--mobile {
-    display: none;
-}
-
 .address {
     font-weight: 400;
     font-size: 20px;
