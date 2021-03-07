@@ -353,14 +353,33 @@ p {
     color: #E3B873;
 }
 
+#div1 {
+    overflow:hidden;
+}
+
+#div1:target {
+    height: auto;
+    margin-top: -110px;
+    padding-top: 110px;
+}
+
 .active__link {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
 
+.arrow-left {
+    cursor: pointer;
+}
+
+.arrow-right {
+    cursor: pointer;
+}
+
 .gallery__photo {
     height: 479px;
     width: 679px;
+    background-image: url("src/img/admiral-repair.jpg");
 }
 
 /* Online Control
