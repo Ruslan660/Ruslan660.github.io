@@ -312,6 +312,10 @@ p {
     margin-top: 20px;
 }
 
+.menu-point {
+    cursor: pointer;
+}
+
 .menu-point--active {
     background: #FFF;
     border-radius: 99%;
