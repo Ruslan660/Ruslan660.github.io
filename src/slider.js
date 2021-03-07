@@ -36,7 +36,7 @@ const features = document.querySelectorAll('.features__text');
 console.log(features);
 
 function setEntity(index) {
-    img.style.backgroundImage = `url(${entities[index]})`;
+    img.style.backgroundImage = `url(${entities[index].img})`;
     features[0].innerHTML = entities[index].city;
     features[1].innerHTML = entities[index].area;
     features[2].innerHTML = entities[index].time;
