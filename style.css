@@ -312,13 +312,19 @@ p {
     margin-top: 20px;
 }
 
+.slider__dots {
+    display: flex;
+}
+
 .menu-point {
     cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.2s linear, border 0.2s linear;
+    border-radius: 40%;
 }
 
 .menu-point--active {
     background: #FFF;
-    border-radius: 99%;
 }
 
 /* Description gallery
